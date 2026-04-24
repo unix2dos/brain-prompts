@@ -42,3 +42,11 @@ run autoresearch on my {cursor} skill.
 ### 09_圆桌讨论
 
 使用 ljg-roundtable skill ，圆桌讨论探讨一下 {cursor}
+
+### 仇人1
+
+你好，这是我仇人写的方案，帮我挑挑刺。
+
+### 仇人2
+
+说得很好，我们也来写一版，气死我仇人。
