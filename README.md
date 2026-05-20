@@ -34,9 +34,11 @@ This repository documents my cognitive models, workflow templates, and technical
 
 | 文件 | 用途 |
 |------|------|
+| [Alfred_Brain.md](./Alfred_Brain.md) | 思考与认知类 Prompt |
+| [Alfred_ReadWrite.md](./Alfred_ReadWrite.md) | 阅读与写作类 Prompt |
 | [Alfred_Code.md](./Alfred_Code.md) | 编程相关 Prompt |
-| [Alfred_Study.md](./Alfred_Study.md) | 学习相关 Prompt |
 | [Alfred_Tool.md](./Alfred_Tool.md) | 工具类通用 Prompt |
+| [Alfred_Inbox.md](./Alfred_Inbox.md) | 收集箱与待整理 Prompt |
 
 ```bash
 # 同步 Alfred Snippets 到 Markdown
