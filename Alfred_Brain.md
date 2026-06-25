@@ -9,7 +9,7 @@
 
 ### 1通用002_下一步
 
-简单描述下刚才做了什么，下一步你建议做什么？
+简单描述下之前做了什么，下一步你建议做什么？
 
 ### 2问000_理清问的问题
 
@@ -19,13 +19,9 @@
 
 使用 grill-with-docs skill 开始。
 
-### 2问002_不停的询问问题2
+### 2问002_抽象问题
 
-使用 grill-with-docs skill 开始。
-
-### 2问003_抽象问题
-
-使用 zoom-out skill 帮助理解。
+I don't know this area of code well. Go up a layer of abstraction. Give me a map of all the relevant modules and callers, using the project's domain glossary vocabulary.
 
 ### 3学新东西001_领域寓言讲解
 
@@ -34,10 +30,6 @@
 ### 3学新东西002_圆桌讨论
 
 使用 ljg-roundtable skill ，讨论一下 {cursor}
-
-### 3学新东西003_知识讲解任务
-
-使用 learn-map skill 写关于 {cursor} 主题的文章。
 
 ### 3学新东西004_问好几层再书写
 
