@@ -42,3 +42,7 @@ c. 看看哪些部分可以省略，精简或扩展
 ### 4_费曼阅读
 
 使用 feynman-read  skill
+
+### 5_预习书籍
+
+使用 book-dissect  skill  讲解  《{cursor}》。

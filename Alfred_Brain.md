@@ -11,6 +11,10 @@
 
 简单描述下之前做了什么，下一步你建议做什么？
 
+### 1通用003_提交代码
+
+本次 session 还有需要提交的代码到 main 吗？
+
 ### 2问000_理清问的问题
 
 使用 ask-first skill。
@@ -19,7 +23,7 @@
 
 使用 grill-with-docs skill 开始。
 
-### 2问002_抽象问题
+### 2问002_向上抽象问题
 
 I don't know this area of code well. Go up a layer of abstraction. Give me a map of all the relevant modules and callers, using the project's domain glossary vocabulary.
 
@@ -37,7 +41,7 @@ I don't know this area of code well. Go up a layer of abstraction. Give me a map
 
 ### 4理解001_12岁男孩听懂
 
-使用 ljg-plain skill 解释一下。
+使用 ljg-plain skill 解释一下，输出 markdown格式。
 
 ### 4理解002_苏格拉底考试
 
