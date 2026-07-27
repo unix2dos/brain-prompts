@@ -13,17 +13,15 @@ OUTPUT_DIR = Path(__file__).parent
 # 源文件夹 -> 输出文件名 映射
 FOLDER_MAPPING = {
     "ai_prompt1_core": "Alfred_Core.md",
-    "ai_prompt2_refine": "Alfred_Refine.md",
-    "ai_prompt3_trial": "Alfred_Trial.md",
-    "ai_prompt4_archive": "Alfred_Archive.md",
+    "ai_prompt2_trial": "Alfred_Trial.md",
+    "ai_prompt3_archive": "Alfred_Archive.md",
 }
 
 # Markdown 标题映射
 TITLE_MAPPING = {
     "ai_prompt1_core": "Alfred AI Prompt - Core",
-    "ai_prompt2_refine": "Alfred AI Prompt - Refine",
-    "ai_prompt3_trial": "Alfred AI Prompt - Trial",
-    "ai_prompt4_archive": "Alfred AI Prompt - Archive",
+    "ai_prompt2_trial": "Alfred AI Prompt - Trial",
+    "ai_prompt3_archive": "Alfred AI Prompt - Archive",
 }
 
 
