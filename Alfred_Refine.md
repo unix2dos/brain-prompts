@@ -11,10 +11,6 @@
 
 run autoresearch on my {cursor} skill.
 
-### 002_向上抽象问题
-
-I don't know this area of code well. Go up a layer of abstraction. Give me a map of all the relevant modules and callers, using the project's domain glossary vocabulary.
-
 ### 004_skill五档体检
 
 # Skill五档体检 Prompt
@@ -46,9 +42,13 @@ I don't know this area of code well. Go up a layer of abstraction. Give me a map
 ---
 现在开始检查你当前安装的所有Skill。
 
-### 006_睡觉执行
+### 008_代码讲解
 
-请执行以上所有工作内容，我现在要睡觉了，所以需要我确认的项目请放到最后，把你那边能推进的部分一并推进。由于工作量庞大，请适时创建工作管理文件，边记录进度边推进。
+讲解指定代码在系统中的职责、入口、主要调用者、数据流和失败边界。只有当关系复杂且图形能明显提升理解时才使用 Mermaid。解释关键代码的设计意图，并只列出有代码证据的可读性、安全性或性能问题。只分析，不修改代码。
+
+### 009_codereview
+
+审查未提交改动中是否存在绕路设计。只报告有证据且值得行动的问题；每项给出位置、影响、为什么属于绕路，以及更简单的替代方案。不要修改代码。
 
 ### 2扩展知识001_扩展文章
 
