@@ -30,15 +30,14 @@ This repository documents my cognitive models, workflow templates, and technical
 
 ### Alfred 快捷 Prompt
 
-我将常用 Prompt 配置在 Alfred Snippets 中，并通过脚本同步到本仓库：
+我将 Prompt 按使用状态配置在 Alfred Snippets 中，并通过脚本同步到本仓库：
 
-| 文件 | 用途 |
+| 文件 | 状态 |
 |------|------|
-| [Alfred_Brain.md](./Alfred_Brain.md) | 思考与认知类 Prompt |
-| [Alfred_ReadWrite.md](./Alfred_ReadWrite.md) | 阅读与写作类 Prompt |
-| [Alfred_Code.md](./Alfred_Code.md) | 编程相关 Prompt |
-| [Alfred_Tool.md](./Alfred_Tool.md) | 工具类通用 Prompt |
-| [Alfred_Inbox.md](./Alfred_Inbox.md) | 收集箱与待整理 Prompt |
+| [Alfred_Core.md](./Alfred_Core.md) | 高频使用、已经验证的 Prompt |
+| [Alfred_Refine.md](./Alfred_Refine.md) | 值得保留、等待优化的 Prompt |
+| [Alfred_Trial.md](./Alfred_Trial.md) | 正在试用或迭代的 Prompt |
+| [Alfred_Archive.md](./Alfred_Archive.md) | 已停用但暂时保留的 Prompt |
 
 ```bash
 # 同步 Alfred Snippets 到 Markdown

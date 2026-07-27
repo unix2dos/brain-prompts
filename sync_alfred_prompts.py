@@ -4,7 +4,6 @@
 """
 
 import json
-import os
 from pathlib import Path
 
 # 配置
@@ -13,20 +12,18 @@ OUTPUT_DIR = Path(__file__).parent
 
 # 源文件夹 -> 输出文件名 映射
 FOLDER_MAPPING = {
-    "ai_prompt1_brain": "Alfred_Brain.md",
-    "ai_prompt2_readwrite": "Alfred_ReadWrite.md",
-    "ai_prompt3_code": "Alfred_Code.md",
-    "ai_prompt4_tool": "Alfred_Tool.md",
-    "ai_prompt5_inbox": "Alfred_Inbox.md",
+    "ai_prompt1_core": "Alfred_Core.md",
+    "ai_prompt2_refine": "Alfred_Refine.md",
+    "ai_prompt3_trial": "Alfred_Trial.md",
+    "ai_prompt4_archive": "Alfred_Archive.md",
 }
 
 # Markdown 标题映射
 TITLE_MAPPING = {
-    "ai_prompt1_brain": "Alfred AI Prompt - Brain",
-    "ai_prompt2_readwrite": "Alfred AI Prompt - ReadWrite",
-    "ai_prompt3_code": "Alfred AI Prompt - Code",
-    "ai_prompt4_tool": "Alfred AI Prompt - Tool",
-    "ai_prompt5_inbox": "Alfred AI Prompt - Inbox",
+    "ai_prompt1_core": "Alfred AI Prompt - Core",
+    "ai_prompt2_refine": "Alfred AI Prompt - Refine",
+    "ai_prompt3_trial": "Alfred AI Prompt - Trial",
+    "ai_prompt4_archive": "Alfred AI Prompt - Archive",
 }
 
 
@@ -45,12 +42,12 @@ def parse_snippet_file(file_path: Path) -> dict | None:
         return None
 
 
-def get_snippets_from_folder(folder_name: str) -> list[dict]:
+def get_snippets_from_folder(folder_name: str) -> list[dict] | None:
     """从指定文件夹读取所有 snippets"""
     folder_path = ALFRED_SNIPPETS_BASE / folder_name
     if not folder_path.exists():
         print(f"❌ 文件夹不存在: {folder_path}")
-        return []
+        return None
 
     snippets = []
     for file_path in folder_path.glob("*.json"):
@@ -77,9 +74,13 @@ def generate_markdown(title: str, snippets: list[dict]) -> str:
     ]
 
     for snippet in snippets:
+        # 清理 Alfred 编辑器可能带入的行尾空白，避免污染生成的 Markdown
+        snippet_text = "\n".join(
+            line.rstrip() for line in snippet["snippet"].splitlines()
+        )
         lines.append(f"### {snippet['name']}")
         lines.append("")
-        lines.append(snippet["snippet"])
+        lines.append(snippet_text)
         lines.append("")
 
     return "\n".join(lines)
@@ -91,8 +92,7 @@ def sync_folder(folder_name: str):
     title = TITLE_MAPPING[folder_name]
 
     snippets = get_snippets_from_folder(folder_name)
-    if not snippets:
-        print(f"⚠️  {folder_name}: 没有找到 snippets")
+    if snippets is None:
         return
 
     markdown_content = generate_markdown(title, snippets)
