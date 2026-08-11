@@ -3,6 +3,14 @@
 
 # Alfred AI Prompt - Archive
 
+### 002_ai agent 测试
+
+run autoresearch on my {cursor} skill.
+
+### 003_搜索skill
+
+使用 find-skills  搜索一个  {cursor}  的 skill
+
 ### 0_通用思考
 
 	请先理解我的问题，如有歧义请先提问澄清。然后分步骤思考并给出推理过程，最后总结答案。使用中文回答。
