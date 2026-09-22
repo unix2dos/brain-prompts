@@ -3,29 +3,9 @@
 
 # Alfred AI Prompt - Archive
 
-### 000_深度追问
-
-使用本机 $mattpocock-skills:grill-with-docs 的 skill 开始。
-
-### 001_深度追问
-
-使用本机 $mattpocock-skills:grill-with-docs 的 skill 开始。
-
-### 002_ai agent 测试
-
-run autoresearch on my {cursor} skill.
-
 ### 002_判断问题澄清
 
 使用 $ask-first  判断是否需要澄清；如果目标和约束已经足够明确，直接继续。
-
-### 003_搜索skill
-
-使用 find-skills  搜索一个  {cursor}  的 skill
-
-### 0_通用思考
-
-	请先理解我的问题，如有歧义请先提问澄清。然后分步骤思考并给出推理过程，最后总结答案。使用中文回答。
 
 ### 2功能001_单元测试
 
@@ -50,16 +30,6 @@ run autoresearch on my {cursor} skill.
 ### 3提升002_前置置信度检查
 
 请作为软件架构审查员，先做前置置信度检测（列出关键上下文并标注✅/❌、声明最小假设、给出1-10分置信度，≤6分时只报Top3高风险+需补充问题后暂停），再按维度（安全/性能/可维护性/可扩展性）输出问题清单表格并逐条给出修复方案与优先级，最后评估修复方案置信度（1-10分）并列出不确定来源及验证建议。
-
-### 910_双向钢人论证_bak
-
-先别急着回答，也别默认我已经把问题想清楚。请先对这个问题做一次详细思考的“双向钢人论证”：
-1.用最完整、最有力的方式，重述我真正想解决的问题。
-2.使用钢人论证法分别给出支持我当前想法、以及反对它的最强论证。
-3.找出双方真正的分歧，以及最可能改变结论的关键变量。
-4.只问我一个最关键的问题。等我回答后，再给出明确判断、理由和下一步行动。
-
-我的问题是：{cursor}
 
 ### 911_换成好问题
 
@@ -102,10 +72,6 @@ run autoresearch on my {cursor} skill.
 
 你是我的神经优化教师。用间隔重复、费曼法则等方法为我制定计划。让我在90天内成为某领域前1%。
 
-### _UI设计
-
-使用 ui-ux-auditor skill 进行分析UI设计。
-
 ### _skill五档体检
 
 # Skill五档体检 Prompt
@@ -136,10 +102,6 @@ run autoresearch on my {cursor} skill.
 9. 暂时不用动什么？
 ---
 现在开始检查你当前安装的所有Skill。
-
-### _waitwhat
-
-使用本机 $wait-what 的 skill 介入。
 
 ### _主题最佳实践
 
@@ -215,4 +177,8 @@ run autoresearch on my {cursor} skill.
 
 ### c写作001_blog润色
 
-使用 $blog-refine skill 润色下这篇文章，在需要的地方使用 mermaid-generator skill 生成图表，禁止图表泛滥。
+使用 $blog-refine skill 润色下这篇文章，在需要的地方使用 mermaid  生成图表，禁止图表泛滥。
+
+### f代码001_冲突解决
+
+解决当前本地 merge 或 rebase 冲突。先判断冲突两侧的意图；能从代码、历史和测试确定的直接解决，只有涉及业务语义且无法判断时才询问我。不要中止当前 merge/rebase。完成后运行相关验证并报告结果。
